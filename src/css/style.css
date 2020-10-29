@@ -48,7 +48,13 @@ body{
     z-index: 999;
 }
 
-button {
+.botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button, .lightboxbutton {
     color: #fff;
     background-color: var(--Verde);
     border-color: var(--Verde);
@@ -59,6 +65,7 @@ button {
     font-weight: bold;
     width: 45%;
     margin: 3% 2%;
+    text-align: center;
 }
 
 .info svg {
@@ -149,4 +156,101 @@ svg.promo {
 .correos a {
     color: #fff;
     font-size: 1.5rem;
+}
+
+#logo_mobile{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    #logo{
+        display: none;
+    }
+    .placaup {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .placaup #placasvg{
+        width: 75%;
+    }
+    .placaup #logo_mobile {
+        display: block;
+        width: 25%;
+        padding: 5px;
+    }
+    .container {
+        display: block;
+        height: auto;
+        margin-top: 3%;
+    }
+
+    .botones {
+        flex-wrap: wrap;
+        margin-top: 5%;
+    }
+
+    button, .lightboxbutton {
+        width: 33%;
+    }
+    .imagen {
+        width: 40vh;
+        height: 40vh;
+    }
+    .imagen:before {
+        width: 40vh;
+        height: 40vh;
+        top: 0;
+        bottom: initial;
+        margin: auto;
+        left: -15%;
+    }
+    .info {
+        width: 100%;
+        height: auto;
+    }
+    .telefonos {
+        margin-top: 5%;
+    }
+    .telefonos, .whatsapp {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .telefonos a, .whatsapp a {
+        width: 45%;
+    }
+    .placadown {
+        position: relative;
+        height: 10vh;
+    }
+
+    .placadown svg {
+        width: 130%;
+        position: absolute;
+        left: -50%;
+        right: -50%;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+    }
+
+    svg.promo {
+        height: 42vw;
+        bottom: 0;
+        left: -5%;
+    }
+
+    .correos {
+        bottom: 1vh;
+        right: 7px;
+    }
+
+    .correos a {
+        font-size: 1rem;
+    }
+    .footer{
+        margin-top: -16%;
+    }
 }
