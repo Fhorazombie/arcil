@@ -24,6 +24,71 @@ body{
     display: block;
 }
 
+.placaup2 {
+    width: 50%;
+    display: inline;
+    text-align: center;
+}
+
+.pdf {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 11%;
+    margin-bottom: 11%;
+}
+
+.embed {
+    display: block;
+    padding: 0px;
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+}
+
+.pleca2 {
+    margin-top: -20%;
+}
+
+.form-consulta {
+    max-width: 500px;
+    background: #eee;
+    padding: 50px 50px 100px 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.campo-form {
+    width:100%;
+    height:36px;
+    margin:2px 0 6px;
+    padding-left:6px;
+    box-sizing: border-box;
+    border-radius:3px;
+    border:0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:1em;
+}
+    label span {
+        color: #f00
+    }
+    textarea {
+        min-height: 150px!important;
+    }
+    .btn-form {
+        display: inline-block;
+        border:0;
+        background: rgb(148, 193, 31);
+        height: 46px;
+        line-height: 46px;
+        padding: 0 20px;
+        border-radius: 6px;
+        color:#fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px
+    }
+    .btn-form:hover {
+        background: rgb(80, 107, 11);
+    }
+
 .placadown{
     width: 100%;
     position: absolute;
@@ -49,6 +114,15 @@ body{
 .info {
     width: 50%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.logo-inicio {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,6 +319,7 @@ svg.promo {
         width: 25%;
         padding: 5px;
     }
+    
     .container {
         display: block;
         height: auto;
@@ -291,7 +366,7 @@ svg.promo {
     }
 
     .placadown svg {
-        width: 130%;
+        width: 100%;
         position: absolute;
         left: -50%;
         right: -50%;
@@ -330,5 +405,59 @@ svg.promo {
     .video video {
         height: auto;
         width: 100%;
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    .container {
+        display: flex;
+    }
+    .placaup #placasvg {
+        width: 84%;
+    }
+
+    .placaup #logo_mobile {
+        width: 15%;
+    }
+
+    .imagen {
+        margin-left: -6vw;
+        width: 50%;
+        height: 50vw;
+    }
+
+    .imagen:before {
+        width: 50%;
+        height: 50vw;
+        left: -7%;
+        bottom: 3%;
+    }
+
+    .imagen.imagenvideo {
+        width: 40%;
+        height: 40vw;
+    }
+
+    .imagen.imagenvideo:before {
+        width: 40%;
+        height: 40vw;
+    }
+
+    .info {
+        width: 50%;
+        margin-top: 15vw;
+    }
+    .info.videoinfo {
+        margin: 0px;
+        padding: 0px;
+    }
+    .telefonos, .whatsapp {
+        height: 17vh;
+    }
+    video#videopublicidad {
+        height: 88%;
+        width: auto;
+        margin: auto;
+        display: block;
     }
 }
